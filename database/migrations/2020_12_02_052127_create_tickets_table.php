@@ -14,9 +14,9 @@ class CreateTicketsTable extends Migration
     public function up()
     {
         Schema::create('tickets', function (Blueprint $table) {
-            $table-hn
-            $table->integer('chn_mail');
+            $table->id();
             $table->integer('chn_livechat');
+            $table->integer('chn_mail');
             $table->integer('chn_twitter');
             $table->integer('chn_facebook');
             $table->integer('chn_whatsapp');
