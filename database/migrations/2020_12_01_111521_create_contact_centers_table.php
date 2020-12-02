@@ -22,8 +22,9 @@ class CreateContactCentersTable extends Migration
             $table->integer('call_backs');
             $table->time('avg_talk');
             $table->time('avg_wait_pickup');
-            $table->time('avg_wait_pickup_peak');
-            $table->time('avg_wait_hangup_peak');
+            $table->time('avg_wait_hangup');
+            $table->time('peak_avg_wait_pickup');
+            $table->time('peak_avg_wait_hangup');
             $table->timestamps();
         });
     }
