@@ -7,6 +7,7 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\DateTime;
+use Laravel\Nova\Fields\Date;
 use Laraning\NovaTimeField\TimeField;
 
 
@@ -50,6 +51,7 @@ class ContactCenter extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
+            Date::make('Date','record_day')->format('DD MMM YYYY'),
             Number::make('Agents Oncall','agents_oncall'),
             Number::make('Agents On E-Media','agents_onmedia'),
             Number::make('Calls Answered','call_answered'),

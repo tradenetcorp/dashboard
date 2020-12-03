@@ -2,11 +2,12 @@
 
 namespace App\Nova;
 
-use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Http\Requests\NovaRequest;
+use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
 
 
@@ -45,6 +46,7 @@ class Tickets extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
+            Date::make('Date','record_day')->format('DD MMM YYYY'),
             Number::make('Livechat','chn_livechat')->rules('required'),
             Number::make('Email','chn_mail')->rules('required'),
             Number::make('Twitter','chn_twitter')->rules('required'),

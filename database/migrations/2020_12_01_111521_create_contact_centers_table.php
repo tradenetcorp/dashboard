@@ -15,6 +15,7 @@ class CreateContactCentersTable extends Migration
     {
         Schema::create('contact_centers', function (Blueprint $table) {
             $table->id();
+            $table->date('record_day');	
             $table->integer('agents_oncall');
             $table->integer('agents_onmedia');
             $table->integer('call_answered');

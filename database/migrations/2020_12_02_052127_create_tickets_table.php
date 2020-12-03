@@ -15,6 +15,7 @@ class CreateTicketsTable extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
+            $table->date('record_day');	
             $table->integer('chn_livechat');
             $table->integer('chn_mail');
             $table->integer('chn_twitter');
