@@ -7,6 +7,8 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\DateTime;
+use Laraning\NovaTimeField\TimeField;
+
 
 
 
@@ -53,11 +55,11 @@ class ContactCenter extends Resource
             Number::make('Calls Answered','call_answered'),
             Number::make('Calls Missed','call_missed'),
             Number::make('Call Backs','call_backs'),
-            DateTime::make('Average Talktime','avg_talk')->format('HH:mm'),
-            DateTime::make('Average Wait (Pickup)','avg_wait_pickup')->format('HH:mm'),
-            DateTime::make('Average Wait (Hangup)','avg_wait_hangup')->format('HH:mm'),
-            DateTime::make('Peak Average Wait (Hangup)','peak_avg_wait_pickup')->format('HH:mm'),
-            DateTime::make('Peak Average Wait (Hangup)','peak_avg_wait_hangup')->format('HH:mm'),
+            TimeField::make('Average Talktime','avg_talk'),
+            TimeField::make('Average Wait (Pickup)','avg_wait_pickup'),
+            TimeField::make('Average Wait (Hangup)','avg_wait_hangup'),
+            TimeField::make('Peak Average Wait (Hangup)','peak_avg_wait_pickup'),
+            TimeField::make('Peak Average Wait (Hangup)','peak_avg_wait_hangup')
         ];
     }
 
