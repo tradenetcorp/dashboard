@@ -60,7 +60,7 @@ class ContactCenter extends Resource
             TimeField::make('Average Talktime','avg_talk'),
             TimeField::make('Average Wait (Pickup)','avg_wait_pickup'),
             TimeField::make('Average Wait (Hangup)','avg_wait_hangup'),
-            TimeField::make('Peak Average Wait (Hangup)','peak_avg_wait_pickup'),
+            TimeField::make('Peak Average Wait (Pickup)','peak_avg_wait_pickup'),
             TimeField::make('Peak Average Wait (Hangup)','peak_avg_wait_hangup')
         ];
     }
