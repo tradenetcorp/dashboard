@@ -9,6 +9,11 @@ class ContactCenter extends Model
 {
     use HasFactory;
     protected $casts = [
-        'record_day' => 'date'
+        'record_day' => 'date',
+        'avg_talk' => 'datetime',
+        'avg_wait_pickup' => 'datetime',
+        'avg_wait_hangup' => 'datetime',
+        'peak_avg_wait_pickup' => 'datetime',
+        'peak_avg_wait_hangup' => 'datetime'
     ]; 
 }

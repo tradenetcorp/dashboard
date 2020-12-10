@@ -12,10 +12,10 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "laraning/nova-time-field": "^1.2",
         "laravel/framework": "^8.12",
         "laravel/nova": "*",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "michielfb/laravel-nova-time-field": "^1.1"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
