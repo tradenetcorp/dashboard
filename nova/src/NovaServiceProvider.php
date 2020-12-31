@@ -132,7 +132,7 @@ class NovaServiceProvider extends ServiceProvider
     protected function registerTools()
     {
         Nova::tools([
-            new Dashboard,
+            // new Dashboard,
             new ResourceManager,
         ]);
     }
