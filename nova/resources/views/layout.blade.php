@@ -33,7 +33,9 @@
             <div class="min-h-screen flex-none pt-header min-h-screen w-sidebar bg-grad-sidebar px-6">
                 <a href="{{ \Laravel\Nova\Nova::path() }}">
                     <div class="absolute pin-t pin-l pin-r bg-logo flex items-center w-sidebar h-header px-6 text-white">
-                       @include('nova::partials.logo')
+                       {{-- @include('nova::partials.logo') --}}                         
+                            <p class="w-auto h-8 mt-4 text  tracking-wide sm:h-8 0"> Dashboard</p>
+                      
                     </div>
                 </a>
 
