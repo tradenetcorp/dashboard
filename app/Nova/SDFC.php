@@ -97,4 +97,26 @@ class SDFC extends Resource
         return [];
     }
 
+    /**
+     * Get the displayable label of the resource.
+     *
+     * @return string
+     */
+    public static function label()
+    {
+        return 'SDFC Call Data';
+    }
+
+    /**
+     * Get the displayable singular label of the resource.
+     *
+     * @return string
+     */
+    public static function singularLabel()
+    {
+        return 'SDFC Call Data';
+    }
+
+
+
 }
