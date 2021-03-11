@@ -62,9 +62,9 @@ class ContactCenter extends Resource
             Number::make('Call Backs','call_backs'),
             DateTime::make('Average Talk Time','avg_talk')->format('HH:mm:ss'),
             DateTime::make('Average Wait (Pickup)','avg_wait_pickup')->format('HH:mm:ss'),
-            DateTime::make('Average Wait (Hangup)','avg_wait_hangup')->format('HH:mm:ss'),
-            DateTime::make('Peak Average Wait (Pickup)','peak_avg_wait_pickup')->format('HH:mm:ss'),
-            DateTime::make('Peak Average Wait (Hangup)','peak_avg_wait_hangup')->format('HH:mm:ss')
+            DateTime::make('Average Wait (Hangup)','avg_wait_hangup')->format('HH:mm:ss')->onlyOnDetail(),
+            DateTime::make('Peak Average Wait (Pickup)','peak_avg_wait_pickup')->format('HH:mm:ss')->onlyOnDetail(),
+            DateTime::make('Peak Average Wait (Hangup)','peak_avg_wait_hangup')->format('HH:mm:ss')->onlyOnDetail()
         ];
     }
 
