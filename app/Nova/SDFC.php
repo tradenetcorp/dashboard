@@ -8,25 +8,15 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Date;
-use Michielfb\Time\Time;
 
-
-// use Laraning\NovaTimeField\TimeField;
-
-
-
-
-
-use Laravel\Nova\Http\Requests\NovaRequest;
-
-class ContactCenter extends Resource
+class SDFC extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\ContactCenter::class;
+    public static $model = \App\Models\SDFC::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -55,16 +45,11 @@ class ContactCenter extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
             Date::make('Date','record_day')->format('DD MMM YYYY'),
-            Number::make('Agents Oncall','agents_oncall'),
-            Number::make('Agents On E-Media','agents_onmedia'),
             Number::make('Calls Answered','call_answered'),
             Number::make('Calls Missed','call_missed'),
             Number::make('Call Backs','call_backs'),
             DateTime::make('Average Talk Time','avg_talk')->format('HH:mm:ss'),
-            DateTime::make('Average Wait (Pickup)','avg_wait_pickup')->format('HH:mm:ss'),
-            DateTime::make('Average Wait (Hangup)','avg_wait_hangup')->format('HH:mm:ss'),
-            DateTime::make('Peak Average Wait (Pickup)','peak_avg_wait_pickup')->format('HH:mm:ss'),
-            DateTime::make('Peak Average Wait (Hangup)','peak_avg_wait_hangup')->format('HH:mm:ss')
+            DateTime::make('Average Wait (Pickup)','avg_wait_pickup')->format('HH:mm:ss')
         ];
     }
 
@@ -111,6 +96,5 @@ class ContactCenter extends Resource
     {
         return [];
     }
-    
 
 }
